@@ -37,6 +37,8 @@ Route::group(['middleware'=>'auth','namespace'=>'Backend','prefix'=>'admin','as'
 
     Route::group(['prefix'=>'location','as'=>'location.'],function (){
             Route::get('new_view','LocationController')->name('new_view');
+            Route::post('save_farmer_location','LocationController@saveFarmerLocation')->name('save_farmer_location');
+            Route::get('all_locations','LocationController@allLocations')->name('all_locations');
     });
 
 });

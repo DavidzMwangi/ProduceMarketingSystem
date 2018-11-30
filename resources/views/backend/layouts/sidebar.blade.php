@@ -97,7 +97,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                    <a href="pages/charts/flot.html" class="nav-link">
+                    <a href="{{route('admin.location.all_locations')}}" class="nav-link">
                     <i class="fa fa-circle-o nav-icon"></i>
                     <p>All Locations</p>
                     </a>
