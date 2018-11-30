@@ -21,3 +21,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('master',function (){
    return view('backend.layouts.master');
 });
+
+Route::group(['middleware'=>'auth','namespace'=>'Backend','prefix'=>'admin','as'=>'admin.'],function (){
+
+    Route::group(['prefix'=>'crop','as'=>'crop.'],function (){
+       Route::get('new_crop','CropController')->name('new_crop');
+       Route::post('save_new_crop','CropController@saveNewCrop')->name('save_new_crop');
+    });
+
+
+    Route::group(['prefix'=>'farmer','as'=>'farmer.'],function (){
+       Route::get('all','FarmerController')->name('all');
+       Route::post('save_new_farmer','FarmerController@saveNewFarmer')->name('save_new_farmer');
+    });
+});
