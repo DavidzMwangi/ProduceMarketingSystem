@@ -4,8 +4,10 @@
     <style type="text/css">
         #map{ width:700px; height: 500px; }
     </style>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
+    {{--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>--}}
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAELZVjuyJ3O8qssNbh5xYmCW6wTTzo_r8&callback=initMap">
+    </script>
 @endsection
 
 @section('content')

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
 });
 
 Auth::routes();
@@ -41,4 +41,11 @@ Route::group(['middleware'=>'auth','namespace'=>'Backend','prefix'=>'admin','as'
             Route::get('all_locations','LocationController@allLocations')->name('all_locations');
     });
 
+});
+
+
+Route::group(['namespace'=>'Frontend'],function (){
+    Route::get('maps/{crop_id}','GeneralController@maps');
+    Route::get('get_farmers/{crop_id}','GeneralController@getFarmers');
+    Route::get('get_all_locations/{crop_id}','GeneralController@getAllLocations');
 });
