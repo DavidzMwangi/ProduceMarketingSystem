@@ -40,7 +40,7 @@ class GeneralController extends Controller
 
         return response()->json([
 
-            'locations'=>$locations
+            'locationale'=>$locations
         ]);
     }
 }

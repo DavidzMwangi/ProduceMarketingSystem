@@ -31,7 +31,7 @@ class LocationController extends Controller
         $location->save();
 
 
-        return redirect()->back();
+        return redirect()->route('admin.location.all_locations');
     }
 
     public function allLocations()
